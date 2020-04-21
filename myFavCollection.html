@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>G6 Chinese Input Method</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="myFavCollection.js"></script>
+        <script src="sql.js"></script>
+        <script src="worker.sql.js"></script>
+        <script type="text/javascript" src="ime.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <header id="mainHeader">
+            <div class="container">
+                <h1>G6: My Favourite Collection</h1>
+            </div>
+        </header>
+        
+        <nav id="mainNav">
+            <div class="container">
+                <ul>
+                    <li><a href="./options.html">Home</a></li>
+                    <li><a href="./guidelines.html">Guidelines</a></li>
+                    <li><a href="./wordDictionary.html">Word Dictionary</a></li>
+                    <li><a href="./myFavCollection.html">My Favourite Collection</a></li>
+                    <li><a href="./databaseReset.html">Database Reset</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <section id="myFavCollection">
+            <div class="container">
+                <p>
+                 This function adds word/phrases to G6 database and returns G6 Strokes assigned for input. <br>
+                Word/Phrases added to My Favourite Collection maintain higher priorities than other candidates in G6 IME.
+                </p>
+                
+                Word/Phrases to Add: <br>
+                <input id="wordToAdd" type="text"/>
+                <input id="myFavTrad" type="radio" name="myFavTorS" checked> Traditional
+                <input id="myFavSimp" type="radio" name="myFavTorS"> Simplified
+                <input id="addToMyFav" type="submit" value="Add">
+                
+                <br><br>
+                <span id="errorMsg"></span>
+                <span id="msgAdd"></span>
+                <br>
+                
+                <fieldset>
+                    <legend>Collection</legend>
+                    <input id="delSelectedCollection" type="submit" value="Delete Selected Collection">
+                    <!-- <input id="delSearchHistory" type="submit" value="Clear Log"> -->
+                    <table id="collection">
+                        <tr>
+                            <th>Word/Phrase</th>
+                            <th>Code</th>
+                            <th>T/S</th>
+                            <th>Delete</th>
+                        </tr>
+                    </table>
+                </fieldset>
+                
+            </div>
+        </section>
+        
+        <br>
+        
+    </body>
+</html>

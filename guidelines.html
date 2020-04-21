@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>G6 Chinese Input Method</title>
+        <link rel="stylesheet" href="./styles.css">
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="popup.js"></script>
+        <script src="sql.js"></script>
+        <script src="worker.sql.js"></script>
+        <script type="text/javascript" src="ime.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <header id="mainHeader">
+            <div class="container">
+                <h1>G6: Guidelines</h1>
+            </div>
+        </header>
+        
+        <nav id="mainNav">
+            <div class="container">
+                <ul>
+                    <li><a href="./options.html">Home</a></li>
+                    <li><a href="./guidelines.html">Guidelines</a></li>
+                    <li><a href="./wordDictionary.html">Word Dictionary</a></li>
+                    <li><a href="./myFavCollection.html">My Favourite Collection</a></li>
+                    <li><a href="./databaseReset.html">Database Reset</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <!-- Word Dictionary -->
+        <section id=guidelines>
+            <div class="container">
+                <p>
+                There are three coding rules implemented in G6 Chinese Input Method: <br><br>
+                1. For single Chinese character with number of strokes less than or equals to six, full strokes coding rules with correct hand-written stroke order is used to encode the character, which is identical with those common stroke-based Chinese Input Method. <br><br>
+                <img src ="1char.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
+                2. For single Chinese character with number of strokes greater than six, "3 + 3" character coding rule is applied to encode the character. The former '3' represents the first three strokes of the character, indicating its first radical. The latter '3' represents the last three strokes of the character for further differentiation. <br><br>
+                <img src ="2char.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
+                3. For multiple Chinese characters, "3 + 3" phrase coding rule is applied to encode the character. The former '3' represents the first three strokes of the first character in the phrase, while the latter '3' represents the first three strokes of the last character in the phrase. <br><br>
+                <img src ="3char.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
+                </p>
+                
+                The descriptions of functions in System Menu are as follows: <br>
+ 
+                    <table id="searchHistory">
+                        <tr>
+                            <th>Functions/Features</th>
+                            <th>Quick Access Key</th>
+                            <th>Descriptions</th>
+                        </tr>
+                        <tr>
+                            <td>Chinese Language Input</td>
+                            <td></td>
+                            <td>Enable for Chinese Input.<br> Disable for English Input</td>
+                        </tr>
+                        <tr>
+                            <td>G6 Character Input</td>
+                            <td style="text-align:center">Y / R</td>
+                            <td>Enable for Chinese Input in G6 Coding Stroke Order.<br> Disable for Full Stroke Order.</td>
+                        </tr>
+                        <tr>
+                            <td>G6 2-characer Phrase Input</td>
+                            <td style="text-align:center">H / F</td>
+                            <td>Enable for 2-character Phrase Input in G6 Coding Stroke Order</td>
+                        </tr>
+                        <tr>
+                            <td>G6 3-characer Phrase Input</td>
+                            <td style="text-align:center">N / C</td>
+                            <td>Enable for 3-character Phrase Input in G6 Coding Stroke Order</td>
+                        </tr>
+                        <tr>
+                            <td>G6 M-characer Phrase Input</td>
+                            <td style="text-align:center">M / X</td>
+                            <td>Enable for M-character Phrase Input in G6 Coding Stroke Order</td>
+                        </tr>
+                        <tr>
+                            <td>Punctuation Input</td>
+                            <td style="text-align:center">P</td>
+                            <td>Enable for Chinese Punctuation Input</td>
+                        </tr>
+                        <tr>
+                            <td>Simplified Chinese Input</td>
+                            <td></td>
+                            <td>Enable for Simplified Chinese Input</td>
+                        </tr>
+                        <tr>
+                            <td>UIOJKL Keyboard</td>
+                            <td></td>
+                            <td>Enable for UIOJKL Keyboard for Chinese Strokes</td>
+                        </tr>
+                        <tr>
+                            <td>JKLUIO Keyboard</td>
+                            <td></td>
+                            <td>Enable for JKLUIO Keyboard for Chinese Strokes</td>
+                        </tr>
+                        <tr>
+                            <td>Single Hand Configuration</td>
+                            <td></td>
+                            <td>Use Number 0, 9 to 2 as Candidate Index for Selection</td>
+                        </tr>
+                        <tr>
+                            <td>Single Left-hand Configuration</td>
+                            <td></td>
+                            <td>Enable for QWEASD (or ASDQWE) Keyboard for Chinese Strokes</td>
+                        </tr>
+                        <tr>
+                            <td>Word Prediction</td>
+                            <td></td>
+                            <td>Guess the Next Character for Selected Input</td>
+                        </tr>
+                        <tr>
+                            <td>Adaptive Ranking</td>
+                            <td></td>
+                            <td>Sort Candidate List by Frequency in Descending Order</td>
+                        </tr>                        
+                    </table>
+                    <br>
+                <p>The following figure show the keyboard assignment for Left-hand typists abd Right-hand typists through above configurations:<br>
+                <br>
+                <img src ="keyboard.png" style="display: block; margin-left: auto; margin-right: auto; width: 50%"><br>
+                </p><br>
+            </div>
+        </section>
+        
+        
+        
+    </body>
+</html>

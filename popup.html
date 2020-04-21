@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>G6 Chinese Input Method</title>
+        <style>
+        body {
+            font-family: Arial;
+            font-size: 16px;
+            line-height: 1.6em;
+            margin: 0%;
+            min-width: 300px;
+            background-image: url('./bgGrey.jpg') ;
+            background-position: center center;
+            color: #eeeeee;
+        }
+        #tStroke, #msgAdd {
+            color: yellow;
+        }
+        #wD_errorMsg, #mF_errorMsg {
+            text-align: justify;
+            color: red;
+        }
+        .container {
+            width:90%;
+            margin: auto;
+            overflow: hidden;
+        }
+        h2 {
+            text-align: center
+        }
+        a:link {
+            color: hotpink;
+        }
+        a:visited {
+            color: hotpink;
+        }
+        a:hover {
+            color: lightgreen;
+        }
+        </style>
+        <script src="jquery-3.3.1.min.js"></script>
+        <script src="popup.js"></script>
+        <script src="sql.js"></script>
+        <script src="worker.sql.js"></script>
+        <script type="text/javascript" src="ime.js" charset="utf-8"></script>
+    </head>
+    <body>
+        <header id="mainHeader">
+            <div class="container">
+                <h2>G6: Quick Access</h2>
+            </div>
+        </header>
+        
+        <section id = "popupWindow">
+            <div class = "container">
+                <input id="popupTrad" type="radio" name="popupTorS" checked> Traditional
+                <input id="popupSimp" type="radio" name="popupTorS"> Simplified
+                <fieldset>
+                    <legend>Word Dictionary</legend>
+                        <input id="wordToSearch" type="text"/>
+                        <input id="findWord" type="submit" value="Search"> 
+                    <br>
+                    <span id="wD_errorMsg"></span>
+                    <span id="tStroke"></span>
+                </fieldset>
+                <fieldset>
+                    <legend>My Favourite Collection</legend>
+                    <input id="wordToAdd" type="text"/>
+                    <input id="addToMyFav" type="submit" value="Add"> 
+                    <br>
+                    <span id ="mF_errorMsg"></span>
+                    <span id="msgAdd"></span>
+                </fieldset>
+                <a href="./options.html" target="_blank">More Details</a>
+                <br><br>
+        </div>
+        </section>
+    </body>
+</html>
